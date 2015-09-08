@@ -86,10 +86,12 @@ armou uma bomba que só pode ser desarmada se resolver o desafio que ele criou.
 
 O desafio é o seguinte:
 
-Existe quatro botões, um vermelho, um azul, um verde e um amarelo. Para cada
-botão, foi associado as seguintes sequencias de letras:
+Existe quatro botões, um vermelho, um azul, um verde e um amarelo.
+Um destes botões desarma a bomba, mas você precisa descobrir qual.
 
-| Cor        | Sequencia          |
+Para cada botão, foi associado um código:
+
+| Cor        | Código             |
 | ---------- | ------------------ |
 | VERMELHO   | IAJNLITLUNAYDHFAA  |
 | AZUL       | EFDLUMHBNDRRTM     |
@@ -97,10 +99,13 @@ botão, foi associado as seguintes sequencias de letras:
 | AMARELO    | QPSKXDLPWFLAAKHY   |
 
 Para resolver este desafio, foi associado um valor númerico para cada letra,
-sendo 1 para A até 26 para Z. Para descobrir qual botão desarma a bomba,
-é necessário descobrir a soma dos valores das letras da sequencia e da cor,
-depois fazer a divisão do valor descoberto da sequencia pelo valor da cor,
+sendo 1 para A até 26 para Z.
+
+O desafio é descobrir a soma dos valores das letras de cada código e cor,
+depois fazer a divisão do valor descoberto de cada código pelo valor descoberto da cor,
 onde o resto desta divisão deve ser 11.
+
+O botão que encaixar nesta resolução desarma a bomba.
 
 Enviar a resposta deste desafio no campo observação do formulário do link abaixo,
 juntamente o login do github que fez o pull request do terceiro desafio e
