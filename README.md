@@ -81,7 +81,7 @@ https://<url_do_questionário>
 
 ### Desafio 2
 
-Você faz parte de um esquadrão de desarmamento de bombas, e um terrorista
+Você faz parte de um esquadrão anti-bombas, e um terrorista
 armou uma bomba que só pode ser desarmada se resolver o desafio que ele criou.
 
 O desafio é o seguinte:
