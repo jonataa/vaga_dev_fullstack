@@ -142,7 +142,7 @@ Requisições e suas respectivas respostas esperadas. Iremos usar estes exemplos
 
 - Criar uma tarefa:
 ```
-curl -X POST -d '{"task": "Tomar um café", "done": false}' http://localhost:xxxx/task/
+curl -X POST -H "Content-Type: application/json" -d '{"task": "Tomar um café", "done": false}' http://localhost:xxxx/task/
 Resposta: HTTP 201
 {
   "id": 2,
