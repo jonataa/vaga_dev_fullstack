@@ -122,7 +122,7 @@ Ele deve permitir o cadastro de tarefas,
 marcar como concluida e excluir tarefas.
 
 #### Requisitos
-- Desenvolver em Python ou Go
+- Desenvolver em Python, Go (golang) ou NodeJS
 - As interações da interface web com o backend devem seguir os princípios REST
 - Salvar as informações necessárias em um dos bancos de dados relacionais abaixo:
   - PostgreSQL
