@@ -77,7 +77,7 @@ fazer um pull request neste repositório com a resolução do desafio.
 
 Responder o seguinte questionário:
 
-https://<url_do_questionário>
+https://docs.google.com/a/itflex.net/forms/d/1cwiZ3TarmWx4MXcfJPqANkTU9jnfdah_FWOvqJNzxuw/viewform
 
 ### Desafio 2
 
