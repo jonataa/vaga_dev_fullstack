@@ -6,6 +6,7 @@ de servidores de telefonia IP, firewall e email, além de serviços
 de processamento de dados, e APIs de controle e integração com terceiros.
 
 Requisitos obrigatórios:
+- Curso superior em andamento (Analista de Desevolvimento Júnior) ou concluído (Analista de Desenvolvimento Pleno) em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
 - Gostar muito desenvolvimento de software e tecnologia
 - Ser participativo na construção do produto, contribuindo com ideias para o negócio
 - Ser dinâmico e inquieto, questionando dogmas e premissas, sempre procurando inovação
