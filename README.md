@@ -5,7 +5,7 @@ para desenvolvimento de interface de administração e geração de relatórios
 de servidores de telefonia IP, firewall e email, além de serviços
 de processamento de dados, e APIs de controle e integração com terceiros.
 
-Requisitos obrigatórios:
+Perfil:
 - Curso superior em andamento (Analista de Desevolvimento Júnior) ou concluído (Analista de Desenvolvimento Pleno) em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
 - Gostar muito desenvolvimento de software e tecnologia
 - Ser participativo na construção do produto, contribuindo com ideias para o negócio
@@ -20,7 +20,7 @@ Requisitos obrigatórios:
 - Ter conhecimentos em design e arquitetura de software
 - Gostar de programar em todos os níveis do stack tecnológico
 
-Requisitos fundamentais:
+Requisitos:
 - Ter experiência com programação em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
