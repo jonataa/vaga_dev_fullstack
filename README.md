@@ -29,7 +29,6 @@ Requisitos:
 - Conhecimento de modelagem e utilização de bancos de dados relacionais
 
 Diferenciais:
-- Conhecimento da linguagem de programação Go (golang)
 - Ter experiência em utilização do Git
 - Ter experiência com métodos ágeis (Scrum, Kanban, Lean, etc)
 - Ter conhecimentos de práticas de XP (TDD, refactoring, continuous integration, etc)
@@ -123,7 +122,7 @@ Ele deve permitir o cadastro de tarefas,
 marcar como concluida e excluir tarefas.
 
 #### Requisitos
-- Desenvolver em Python, Go (golang) ou NodeJS
+- Desenvolver em Python ou NodeJS
 - As interações da interface web com o backend devem seguir os princípios REST
 - Salvar as informações necessárias em um dos bancos de dados relacionais abaixo:
   - PostgreSQL
