@@ -8,9 +8,6 @@ de processamento de dados, e APIs de controle e integração com terceiros.
 Trabalho presencial em Joinville / SC
 
 Perfil:
-- Curso superior em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
-  - Curso superior em andamento para Analista de Desevolvimento Júnior
-  - Curso superior concluído para Analista de Desenvolvimento Pleno
 - Gostar muito desenvolvimento de software e tecnologia
 - Ser participativo na construção do produto, contribuindo com ideias para o negócio
 - Ser dinâmico e inquieto, questionando dogmas e premissas, sempre procurando inovação
@@ -25,6 +22,9 @@ Perfil:
 - Gostar de programar em todos os níveis do stack tecnológico
 
 Requisitos:
+- Curso superior em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
+  - Curso superior em andamento para Analista de Desevolvimento Júnior
+  - Curso superior concluído para Analista de Desenvolvimento Pleno
 - Ter experiência com programação em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
