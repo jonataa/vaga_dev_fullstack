@@ -23,8 +23,8 @@ Perfil:
 
 Requisitos:
 - Curso superior em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
-  - Curso superior em andamento para Analista de Desevolvimento Júnior
-  - Curso superior concluído para Analista de Desenvolvimento Pleno
+  - Curso superior em andamento para se candidatar a Analista de Desevolvimento Júnior
+  - Curso superior concluído: requisito mínimo para se canditar a Analista de Desenvolvimento Pleno
 - Ter experiência com programação em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
