@@ -5,7 +5,7 @@ para desenvolvimento de interface de administração e geração de relatórios
 de servidores de telefonia IP, firewall e email, além de serviços
 de processamento de dados, e APIs de controle e integração com terceiros.
 
-Trabalho presencial em Joinville 
+Trabalho presencial em Joinville / SC
 
 Perfil:
 - Curso superior em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
