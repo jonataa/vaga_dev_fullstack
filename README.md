@@ -75,7 +75,7 @@ capital do Paraná, Curitiba (130Km).
 Para se candidatar a vaga, será necessário completar os três
 desafios abaixo, sendo que no segundo é necessário somente descobrir
 a resposta, no terceiro é necessário fazer um push do código para seu repositório no GitHub.
-Enviar junto com o currículo a resposta do segundo desafio, e o link do seu repositório com a código do terceiro desafio.
+Enviar junto com o currículo a resposta do segundo desafio, e o link do seu repositório com o código do terceiro desafio.
 
 ### Desafio 1
 
