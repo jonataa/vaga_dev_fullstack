@@ -122,11 +122,13 @@ https://www.itflex.com.br/trabalhe
 #### Objetivo
 Criar um aplicativo web de lista de tarefas.
 
-Ele deve permitir o cadastro de tarefas,
+Ele deve ter uma interface para cadastro de tarefas,
 marcar como concluida e excluir tarefas.
 
 #### Requisitos
 - Desenvolver em Python ou NodeJS
+- Ter uma interface web para o usuário
+  - Escolha de framework frontend livre
 - As interações da interface web com o backend devem seguir os princípios REST
 - Salvar as informações necessárias em um dos bancos de dados relacionais abaixo:
   - PostgreSQL
@@ -135,6 +137,7 @@ marcar como concluida e excluir tarefas.
 - Testes com informação da cobertura
 - Gerar logs das ações
 - Documentar como rodar o projeto e os testes
+
 
 #### Operações desejadas
 - Cadastro de tarefas
