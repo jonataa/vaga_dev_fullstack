@@ -27,7 +27,7 @@ Requisitos:
   - Curso superior em andamento para se candidatar a Analista de Desevolvimento Júnior
   - Curso superior concluído: requisito mínimo para se canditar a Analista de Desenvolvimento Pleno
 - Ter experiência com programação em Python
-  - Ou experiência em outra linguagem (PHP,Ruby,Java) com disposição e interesse em estudar e programar em Python
+  - Ou experiência em outra linguagem (PHP,Ruby) com disposição e interesse em estudar e programar em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
 - Ter experiência com desenvolvimento Web (HTML5, CSS, JavaScript, etc)
