@@ -10,13 +10,13 @@ Trabalho presencial em Joinville / SC
 Perfil:
 - Gostar muito desenvolvimento de software e tecnologia
 - Ser participativo na construção do produto, contribuindo com ideias para o negócio
-- Ser dinâmico e inquieto, questionando dogmas e premissas, sempre procurando inovação
+- Ser dinâmico, sempre procurando inovação
 - Ter facilidade de trabalhar dentro de times multi-disciplinares
 - Ter iniciativa para estudos
 - Acompanhar tendências e inovações que surgem no mercado
 - Ser poliglota em linguagens de programação e scripting
 - Escrever código limpo e legível para pessoas
-- Ter profunda preocupação com qualidade e performance
+- Ter preocupação com qualidade e performance
 - Compreender a importância e praticar versionamento de código
 - Ter conhecimentos em design e arquitetura de software
 - Gostar de programar em todos os níveis do stack tecnológico
@@ -27,27 +27,27 @@ Requisitos:
   - Curso superior em andamento para se candidatar a Analista de Desevolvimento Júnior
   - Curso superior concluído: requisito mínimo para se canditar a Analista de Desenvolvimento Pleno
 - Ter experiência com programação em Python
+  - Ou experiência em outra linguagem (PHP,Ruby,Java) e disposição e interesse em estudar e programar em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
 - Ter experiência com desenvolvimento Web (HTML5, CSS, JavaScript, etc)
 - Ter conhecimentos na linguagem de scripts Bash
 - Conhecimento de modelagem e utilização de bancos de dados relacionais
 
-Diferenciais para o processo de seleção
+Diferenciais para o processo de seleção:
+
 - Utilização do Git
 - Conhecer/utilizar expressões regulares
 - Usar/conhecer Linux
-- Noções em métodos ágeis (Scrum, Kanban, Lean, etc) e praticas XP (refactoring, continuous integration, etc)
-- Noções com ferramentas de TDD de código
-- Conhecimento com bibliotecas e frameworks frontend
-- Utilizar/conhecer o banco de dados PostgreSQL
-- Utilizar/conhecer o banco de dados MySQL
-- Conhecimentos em alguma ferramenta de provisionamento, tais como Puppet, Chef, etc
-- Ter conhecimentos de infra-estrutura
-- Ter conhecimentos de virtualização e/ou conteinerização com KVM, Docker, etc
-- Ter conhecimentos de configuração e implantação de serviços Linux
+- Utilizar/conhecer o banco de dados PostgreSQL ou MySQL
+- Conhecimento em bibliotecas e frameworks de frontend
+- Conhecimento em Scrum
+- Conhecimento de infra-estrutura
+- Conhecimento em virtualização e/ou conteinerização (KVM, Docker) etc
+- Conhecimento em configuração e implantação de serviços Linux
+- Conceitos e ferramentas de TDD de código
+- Conceitos e noções sobre ferramentas de provisionamento (tais como Puppet, Chef)
 
-Tratamos todas as nossas aplicações como sistemas de missão crítica.
 Usamos software livre na grande maioria das aplicações e ferramentas por traz da aplicação.
 
 A vaga é CLT, oferece as seguintes vantagens:
@@ -121,7 +121,8 @@ Ele deve ter uma interface para cadastro de tarefas,
 marcar como concluida e excluir tarefas.
 
 #### Requisitos
-- Desenvolver em Python ou NodeJS
+
+- Desenvolver em Python, NodeJS, PHP ou Ruby
 - Ter uma interface web para o usuário
   - Escolha de framework frontend livre
 - As interações da interface web com o backend devem seguir os princípios REST
