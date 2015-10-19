@@ -27,7 +27,7 @@ Requisitos:
   - Curso superior em andamento para se candidatar a Analista de Desevolvimento Júnior
   - Curso superior concluído: requisito mínimo para se canditar a Analista de Desenvolvimento Pleno
 - Ter experiência com programação em Python
-  - Ou experiência em outra linguagem (PHP,Ruby,Java) e disposição e interesse em estudar e programar em Python
+  - Ou experiência em outra linguagem (PHP,Ruby,Java) com disposição e interesse em estudar e programar em Python
 - Entender o funcionamento do protocolo HTTP
 - Ter experiência com bibliotecas e frameworks backend
 - Ter experiência com desenvolvimento Web (HTML5, CSS, JavaScript, etc)
@@ -37,16 +37,16 @@ Requisitos:
 Diferenciais para o processo de seleção:
 
 - Utilização do Git
-- Conhecer/utilizar expressões regulares
+- Expressões regulares
 - Usar/conhecer Linux
-- Utilizar/conhecer o banco de dados PostgreSQL ou MySQL
-- Conhecimento em bibliotecas e frameworks de frontend
-- Conhecimento em Scrum
-- Conhecimento de infra-estrutura
-- Conhecimento em virtualização e/ou conteinerização (KVM, Docker) etc
-- Conhecimento em configuração e implantação de serviços Linux
+- Banco de dados PostgreSQL ou MySQL
+- Bibliotecas e frameworks de frontend
+- Noções de Scrum
 - Conceitos e ferramentas de TDD de código
-- Conceitos e noções sobre ferramentas de provisionamento (tais como Puppet, Chef)
+- Conhecimento de infra-estrutura
+- Configuração e implantação de serviços Linux
+- Virtualização e/ou conteinerização (KVM ou Docker)
+- Noções sobre ferramentas de provisionamento (Puppet, chef ou ansible)
 
 Usamos software livre na grande maioria das aplicações e ferramentas por traz da aplicação.
 
