@@ -22,6 +22,7 @@ Perfil:
 - Gostar de programar em todos os níveis do stack tecnológico
 
 Requisitos:
+
 - Curso superior em Sistemas de Informação, Ciências da Computação ou Engenharia da computação
   - Curso superior em andamento para se candidatar a Analista de Desevolvimento Júnior
   - Curso superior concluído: requisito mínimo para se canditar a Analista de Desenvolvimento Pleno
@@ -32,25 +33,19 @@ Requisitos:
 - Ter conhecimentos na linguagem de scripts Bash
 - Conhecimento de modelagem e utilização de bancos de dados relacionais
 
-Diferenciais:
-- Ter experiência em utilização do Git
-- Ter experiência com métodos ágeis (Scrum, Kanban, Lean, etc)
-- Ter conhecimentos de práticas de XP (TDD, refactoring, continuous integration, etc)
-- Ter experiência com ferramentas de integração contínua (Jenkins, GoCD, etc)
-- Ter experiência com ferramentas de TDD de código
-- Ter experiência com ferramentas de TDD de frontend (Selenium, etc)
-- Ter experiência com ferramentas de monitoramento de performance de aplicação
+Diferenciais para o processo de seleção
+- Utilização do Git
 - Conhecer/utilizar expressões regulares
 - Usar/conhecer Linux
-- Ter experiência com bibliotecas e frameworks frontend
+- Noções em métodos ágeis (Scrum, Kanban, Lean, etc) e praticas XP (refactoring, continuous integration, etc)
+- Noções com ferramentas de TDD de código
+- Conhecimento com bibliotecas e frameworks frontend
 - Utilizar/conhecer o banco de dados PostgreSQL
 - Utilizar/conhecer o banco de dados MySQL
-- Ter conhecimentos de automação de deploy (capistrano, fabric, etc)
-- Ter conhecimentos em alguma ferramenta de provisionamento, tais como Puppet, Chef, etc
+- Conhecimentos em alguma ferramenta de provisionamento, tais como Puppet, Chef, etc
 - Ter conhecimentos de infra-estrutura
 - Ter conhecimentos de virtualização e/ou conteinerização com KVM, Docker, etc
 - Ter conhecimentos de configuração e implantação de serviços Linux
-- Ter conhecimentos de telefonia IP
 
 Tratamos todas as nossas aplicações como sistemas de missão crítica.
 Usamos software livre na grande maioria das aplicações e ferramentas por traz da aplicação.
