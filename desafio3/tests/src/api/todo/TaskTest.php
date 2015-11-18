@@ -50,7 +50,7 @@ class TaskTest extends AbstractTestCase
     $this->assertEquals(1, $this->rep->count());
   }
 
-  public function testCheckTaskStatusAsNotCompleted()
+  public function testCheckTaskStatusDefaultAsNotCompleted()
   {
     $task = new Task('Foo Bar');
     $this->assertFalse($task->isDone());
