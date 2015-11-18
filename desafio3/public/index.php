@@ -1,13 +1,7 @@
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
-
-use App\Todo\TaskBundle\Task;
-use App\Todo\TaskBundle\TaskRepository;
-
-$container = new \Slim\Container;
-$container['repository'] = new TaskRepository(new PDO('sqlite:../db/database.sq3'));
-$app = new \Slim\App($container);
+$app = require __DIR__.'/../src/bootstrap.php';
 
 # debug mode
 // $app->settings['displayErrorDetails'] = true;
