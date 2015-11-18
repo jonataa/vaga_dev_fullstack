@@ -23,7 +23,9 @@ class TaskRepository
     $title = $task->getTitle();
     $done = $task->isDone();
 
-    return $stmt->execute();
+    $stmt->execute();
+    $task->setId($this->pdo->lastInsertId());
+    return $task;
   }
 
   public function count()

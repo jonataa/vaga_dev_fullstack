@@ -17,8 +17,9 @@ class TaskTest extends AbstractTestCase
 
   public function testAddNewTaskInRepository()
   {
-    $task = new Task('Foo Bar');
-    $this->assertTrue($this->rep->save($task));
+    $task = $this->rep->save(new Task('Foo Bar'));
+    $this->assertNotNull($task);
+    $this->assertEquals(1, $task->getId());
     $this->assertEquals(1, $this->rep->count());
   }
 
