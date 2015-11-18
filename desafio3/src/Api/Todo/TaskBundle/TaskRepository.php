@@ -34,18 +34,8 @@ class TaskRepository
   private function getSaveSql($isUpdate)
   {
     if ($isUpdate)
-      return $this->getUpdateSQL();
-    return $this->getInsertSQL();
-  }
-
-  private function getInsertSQL()
-  {
+      return 'UPDATE tasks SET title = :title, done = :done WHERE id = :id';
     return 'INSERT INTO tasks (title, done) VALUES (:title, :done)';
-  }
-
-  private function getUpdateSQL()
-  {
-    return 'UPDATE tasks SET title = :title, done = :done WHERE id = :id';
   }
 
   public function removeById($id)
