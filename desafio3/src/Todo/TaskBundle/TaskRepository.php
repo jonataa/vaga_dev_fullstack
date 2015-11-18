@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Todo\TaskBundle;
+namespace App\Todo\TaskBundle;
 
 class TaskRepository
 {

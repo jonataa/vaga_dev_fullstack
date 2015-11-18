@@ -1,11 +1,9 @@
 <?php
 
-require 'tests/AbstractTestCase.php';
-require 'src/Api/Todo/TaskBundle/Task.php';
-require 'src/Api/Todo/TaskBundle/TaskRepository.php';
+namespace Test;
 
-use Api\Todo\TaskBundle\Task;
-use Api\Todo\TaskBundle\TaskRepository;
+use App\Todo\TaskBundle\Task;
+use App\Todo\TaskBundle\TaskRepository;
 
 class TaskTest extends AbstractTestCase
 {

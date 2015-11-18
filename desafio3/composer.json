@@ -5,7 +5,8 @@
     },
     "autoload": {
       "psr-4": {
-        "Api\\": "src/"
+        "App\\": "src/",
+        "Test\\": "tests/"
       }
     }
 }
