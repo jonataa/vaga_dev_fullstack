@@ -2,14 +2,15 @@
 
 namespace App\Todo\TaskBundle;
 
+use \PDO;
+
 class TaskRepository
 {
 
-  protected $table = 'tasks';
-  protected $model = 'App\Todo\TaskBundle\Task';
+  protected $table = 'tasks';  
   protected $pdo;
 
-  public function __construct(\PDO $pdo)
+  public function __construct(PDO $pdo)
   {
     $this->pdo = $pdo;
   }
@@ -51,7 +52,7 @@ class TaskRepository
     $rows = array();
     $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');
     foreach ($tasks as $task) {
-      $rows[] = new Task($task['title'], $task['done']);
+      $rows[] = new Task($task['title'], $task['done'], $task['id']);
     }
     return $rows;
   }
