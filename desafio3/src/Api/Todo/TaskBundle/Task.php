@@ -16,6 +16,11 @@ class Task
   { return $this->title;
   }
 
+  public function markAsDone()
+  {
+    $this->done = true;
+  }
+
   public function isDone()
   { return (bool) $this->done;
   }

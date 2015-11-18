@@ -23,4 +23,11 @@ class TaskTest extends AbstractTestCase
     $this->assertFalse($task->isDone());
   }
 
+  public function testMarkTaskAsDone()
+  {
+    $task = new Task('Foo Bar');
+    $task->markAsDone();
+    $this->assertTrue($task->isDone());
+  }
+
 }
