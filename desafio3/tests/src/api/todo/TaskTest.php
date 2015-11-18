@@ -10,11 +10,12 @@ use Api\Todo\TaskBundle\TaskRepository;
 class TaskTest extends AbstractTestCase
 {
 
-  public function testAddNewTask()
+  public function testAddNewTaskInRepository()
   {
     $task = new Task('Foo Bar');
     $rep = new TaskRepository($this->createPDO());
     $this->assertTrue($rep->save($task));
+    $this->assertEquals(1, $rep->count());
   }
 
   public function testCheckTaskStatusAsNotCompleted()
