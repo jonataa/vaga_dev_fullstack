@@ -23,6 +23,15 @@ class TaskTest extends AbstractTestCase
     $this->assertEquals(1, $this->rep->count());
   }
 
+  public function testMarkAsCompletedInRepository()
+  {
+    $task = $this->rep->save(new Task('Foo Bar'));
+    $this->assertFalse($task->isDone());
+    $task->markAsDone();
+    $task = $this->rep->save($task);
+    $this->assertEquals(1, $this->rep->count());
+  }
+
   public function testCountRowsInRepository()
   {
     $this->rep->save(new Task('Foo Bar'));

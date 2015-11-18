@@ -15,8 +15,10 @@ class TaskRepository
 
   public function save(Task $task)
   {
-    $stmt = $this->pdo->prepare('INSERT INTO tasks (title, done) VALUES (:title, :done)');
+    $sql = $this->getSaveSQL(! empty($task->getId()));
+    $stmt = $this->pdo->prepare($sql);
 
+    $stmt->bindParam(':title', $id);
     $stmt->bindParam(':title', $title);
     $stmt->bindParam(':done', $done);
 
@@ -27,6 +29,23 @@ class TaskRepository
       $task->setId($this->pdo->lastInsertId());
 
     return $task;
+  }
+
+  private function getSaveSql($isUpdate)
+  {
+    if ($isUpdate)
+      return $this->getUpdateSQL();
+    return $this->getInsertSQL();
+  }
+
+  private function getInsertSQL()
+  {
+    return 'INSERT INTO tasks (title, done) VALUES (:title, :done)';
+  }
+
+  private function getUpdateSQL()
+  {
+    return 'UPDATE tasks SET title = :title, done = :done WHERE id = :id';
   }
 
   public function removeById($id)
