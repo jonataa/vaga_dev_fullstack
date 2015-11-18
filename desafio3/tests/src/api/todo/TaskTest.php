@@ -20,11 +20,9 @@ class TaskTest extends AbstractTestCase
 
   public function testCountRowsInRepository()
   {
-    $rep = new TaskRepository($this->createPDO());
-    $task = new Task('Foo Bar');
-    $task2 = new Task('Fizz Buzz');
-    $rep->save($task);
-    $rep->save($task2);
+    $rep = new TaskRepository($this->createPDO());    
+    $rep->save(new Task('Foo Bar'));
+    $rep->save(new Task('Fizz Buzz'));
     $this->assertEquals(2, $rep->count());
   }
 
