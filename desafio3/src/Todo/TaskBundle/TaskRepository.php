@@ -6,6 +6,7 @@ class TaskRepository
 {
 
   protected $table = 'tasks';
+  protected $model = 'App\Todo\TaskBundle\Task';
   protected $pdo;
 
   public function __construct(\PDO $pdo)
@@ -43,6 +44,16 @@ class TaskRepository
     $stmt = $this->pdo->prepare('DELETE FROM tasks WHERE id = :id');
     $stmt->bindParam(':id', $id);
     return $stmt->execute();
+  }
+
+  public function getAll()
+  {
+    $rows = array();
+    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');
+    foreach ($tasks as $task) {
+      $rows[] = new Task($task['title'], $task['done']);
+    }
+    return $rows;
   }
 
   public function count()

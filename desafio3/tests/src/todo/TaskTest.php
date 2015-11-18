@@ -40,7 +40,7 @@ class TaskTest extends AbstractTestCase
   public function testRemoveTaskByIdFromRepository()
   {
     $task1 = $this->rep->save(new Task('Foo Bar')); // id: 1
-    $task2 = $this->rep->save(new Task('Foo Bar')); // id: 2
+    $task2 = $this->rep->save(new Task('Fizz Buzz')); // id: 2
     $this->assertEquals(2, $this->rep->count());
 
     $isRemoved = $this->rep->removeById($task1->getId());
@@ -59,6 +59,18 @@ class TaskTest extends AbstractTestCase
     $task = new Task('Foo Bar');
     $task->markAsDone();
     $this->assertTrue($task->isDone());
+  }
+
+  public function testGetAllTasksFromRepository()
+  {
+    $this->rep->save(new Task('Foo Bar'));
+    $this->rep->save(new Task('Fizz Buzz'));
+    $tasks = $this->rep->getAll();
+
+    $this->assertCount(2, $tasks);
+    $this->assertTrue(is_array($tasks));
+    $this->assertEquals('Foo Bar', $tasks[0]->getTitle());
+    $this->assertEquals('Fizz Buzz', $tasks[1]->getTitle());
   }
 
 }

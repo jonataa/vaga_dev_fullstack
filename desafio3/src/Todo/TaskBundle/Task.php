@@ -6,11 +6,12 @@ class Task
 {
   protected $id;
   protected $title;
-  protected $done = false;
+  protected $done;
 
-  public function __construct($title)
+  public function __construct($title, $done = false)
   {
     $this->title = $title;
+    $this->done = (bool) $done;
   }
 
   public function getId()
