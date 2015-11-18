@@ -30,6 +30,17 @@ class TaskTest extends AbstractTestCase
     $this->assertEquals(2, $this->rep->count());
   }
 
+  public function testRemoveTaskByIdFromRepository()
+  {
+    $task1 = $this->rep->save(new Task('Foo Bar')); // id: 1
+    $task2 = $this->rep->save(new Task('Foo Bar')); // id: 2
+    $this->assertEquals(2, $this->rep->count());
+
+    $isRemoved = $this->rep->removeById($task1->getId());
+    $this->assertTrue($isRemoved);
+    $this->assertEquals(1, $this->rep->count());
+  }
+
   public function testCheckTaskStatusAsNotCompleted()
   {
     $task = new Task('Foo Bar');

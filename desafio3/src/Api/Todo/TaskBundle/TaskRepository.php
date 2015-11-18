@@ -23,9 +23,17 @@ class TaskRepository
     $title = $task->getTitle();
     $done = $task->isDone();
 
-    $stmt->execute();
-    $task->setId($this->pdo->lastInsertId());
+    if (true === $stmt->execute())
+      $task->setId($this->pdo->lastInsertId());
+
     return $task;
+  }
+
+  public function removeById($id)
+  {
+    $stmt = $this->pdo->prepare('DELETE FROM tasks WHERE id = :id');
+    $stmt->bindParam(':id', $id);
+    return $stmt->execute();
   }
 
   public function count()
