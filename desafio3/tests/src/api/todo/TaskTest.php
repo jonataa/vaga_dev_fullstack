@@ -18,6 +18,16 @@ class TaskTest extends AbstractTestCase
     $this->assertEquals(1, $rep->count());
   }
 
+  public function testCountRowsInRepository()
+  {
+    $rep = new TaskRepository($this->createPDO());
+    $task = new Task('Foo Bar');
+    $task2 = new Task('Fizz Buzz');
+    $rep->save($task);
+    $rep->save($task2);
+    $this->assertEquals(2, $rep->count());
+  }
+
   public function testCheckTaskStatusAsNotCompleted()
   {
     $task = new Task('Foo Bar');
