@@ -14,4 +14,10 @@ class RestApiTest extends AbstractTestCase
     $this->assertEquals('Tomar um café', end($tasks)['title']);
   }
 
+  public function testRemoveTask()
+  {
+    $this->request('DELETE', '/task/1/');
+    $this->assertEquals(204, $this->response->getStatusCode());
+  }    
+
 }

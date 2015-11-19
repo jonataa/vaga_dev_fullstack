@@ -30,17 +30,17 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
     Database::exec('DROP TABLE tasks');
   }
 
-  public function request($method, $path)
+  public function request($method, $path, $options = array())
   {
     $this->loadDatabaseDemo();
     Database::getInstance($this->dsn);
 
     ob_start();
 
-    $env = Environment::mock([
+    $env = Environment::mock(array_merge([
       'REQUEST_METHOD' => $method,
       'REQUEST_URI'    => $path
-    ]);
+    ], $options));
 
     $app = require 'src/bootstrap.php';
     $app = require 'src/routes.php';

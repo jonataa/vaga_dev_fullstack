@@ -12,12 +12,10 @@ class TaskCreate
     $this->repository = $container->get('repository');
   }
 
-  public function __invoke ($request, $response, $args)
+  public function __invoke($request, $response, $args)
   {
-    $repository = $this->container->get('repository');
-
     $data = $request->getParsedBody();
-    if (empty($data['task']) || empty($data['done']))
+    if (! (isset($data['task']) || isset($data['done'])))
         return $response->withStatus(400)->write('Required field missing');
     $task = $this->repository->save(new Task($data['task'], $data['done']));
 
