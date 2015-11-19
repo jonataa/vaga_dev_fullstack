@@ -1,10 +1,13 @@
 <?php
 
-$pdo = new PDO('sqlite:db/database.sq3');
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$pdo->exec("DROP TABLE IF EXISTS tasks");
-$pdo->exec("CREATE TABLE tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, done INTEGER NOT NULL DEFAULT 0)");
-$pdo->query("
+use App\Lib\Database;
+
+Database::getInstance('sqlite:db/database.sq3');
+Database::exec("DROP TABLE IF EXISTS tasks");
+Database::exec("CREATE TABLE tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, done INTEGER NOT NULL DEFAULT 0)");
+Database::exec("
   INSERT INTO tasks (title, done)
   VALUES
     ('Fazer desafio da iTFLEX', 0),

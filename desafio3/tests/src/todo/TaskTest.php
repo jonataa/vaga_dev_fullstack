@@ -72,5 +72,10 @@ class TaskTest extends AbstractTestCase
     $this->assertEquals('Foo Bar', $tasks[0]->getTitle());
     $this->assertEquals('Fizz Buzz', $tasks[1]->getTitle());
   }
+  
+  public function tearDown()
+  {
+    $this->databaseDestroy();
+  }
 
 }

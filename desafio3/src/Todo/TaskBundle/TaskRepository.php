@@ -7,7 +7,7 @@ use \PDO;
 class TaskRepository
 {
 
-  protected $table = 'tasks';  
+  protected $table = 'tasks';
   protected $pdo;
 
   public function __construct(PDO $pdo)
@@ -50,7 +50,7 @@ class TaskRepository
   public function getAll()
   {
     $rows = array();
-    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');
+    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');    
     foreach ($tasks as $task) {
       $rows[] = new Task($task['title'], $task['done'], $task['id']);
     }

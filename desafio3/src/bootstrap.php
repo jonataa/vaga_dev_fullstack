@@ -1,14 +1,22 @@
 <?php
 
 use App\Todo\TaskBundle\TaskRepository;
+use App\Lib\Database;
 
-//var_dump($_SERVER); die;
+$container = isset($container) ? $container : new \Slim\Container;
 
-$container = new \Slim\Container;
-$container['repository'] = new TaskRepository(new PDO(getenv('DB')));
+$dsn = getenv('DB');
 
-if (isset ($env) && !empty($env)) {  
-  $container['environment'] = function() use ($env) {
+$container['db'] = function () use ($dsn) {
+  return Database::getInstance($dsn);
+};
+
+$container['repository'] = function () use ($container) {
+  return new TaskRepository($container->get('db'));
+};
+
+if (isset ($env) && !empty($env)) {
+  $container['environment'] = function () use ($env) {
     return $env;
   };
 }
