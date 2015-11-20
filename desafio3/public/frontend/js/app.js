@@ -1,5 +1,6 @@
-angular.module('myTodoList', [])
-  .controller('TodoListCtrl', function ($scope) {
+angular.module('myTodoList', ['TodoService'])
+  .controller('TodoListCtrl', function ($scope, Task) {
+    Task.query();
     $scope.tasks = [
       {title: 'Fazer desafio da iTFLEX', done: false},
       {title: 'Tomar um café', done: true}
