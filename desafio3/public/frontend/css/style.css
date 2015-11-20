@@ -1,0 +1,12 @@
+.task-status-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.btn-excluir {
+  visibility: hidden;
+}
+
+ul li:hover > .btn-excluir {
+  visibility: visible;
+}

@@ -1,0 +1,3 @@
+vendor/
+*.sq3
+public/frontend/bower_components
