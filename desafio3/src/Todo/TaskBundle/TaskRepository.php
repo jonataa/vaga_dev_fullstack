@@ -20,17 +20,20 @@ class TaskRepository
     $sql = $this->getSaveSQL(! empty($task->getId()));
     $stmt = $this->pdo->prepare($sql);
 
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    if ($isUpdate = $task->getId() !== 0) {      
+      $id = $task->getId();
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    }
+
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->bindParam(':done', $done, PDO::PARAM_INT);
 
-    $id = $task->getId();
     $title = $task->getTitle();
     $done = $task->isDone();
 
     $success = $stmt->execute();
 
-    if (empty($task->getId()))
+    if (false === $isUpdate)
       $task->setId($this->pdo->lastInsertId());
 
     return $task;
