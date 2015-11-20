@@ -20,14 +20,20 @@ class TaskRepository
     $sql = $this->getSaveSQL(! empty($task->getId()));
     $stmt = $this->pdo->prepare($sql);
 
-    $stmt->bindParam(':title', $id);
-    $stmt->bindParam(':title', $title);
-    $stmt->bindParam(':done', $done);
+    if ($isUpdate = $task->getId() !== 0) {      
+      $id = $task->getId();
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    }
+
+    $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+    $stmt->bindParam(':done', $done, PDO::PARAM_INT);
 
     $title = $task->getTitle();
     $done = $task->isDone();
 
-    if (true === $stmt->execute())
+    $success = $stmt->execute();
+
+    if (false === $isUpdate)
       $task->setId($this->pdo->lastInsertId());
 
     return $task;
@@ -50,11 +56,20 @@ class TaskRepository
   public function getAll()
   {
     $rows = array();
-    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');    
+    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');
     foreach ($tasks as $task) {
       $rows[] = new Task($task['title'], $task['done'], $task['id']);
     }
     return $rows;
+  }
+
+  public function findById($id)
+  {
+    $stmt = $this->pdo->prepare('SELECT id, title, done FROM tasks WHERE id = :id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $task = $stmt->fetch();
+    return new Task($task['title'], $task['done'], $task['id']);
   }
 
   public function count()

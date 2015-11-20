@@ -10,7 +10,7 @@ class Task
 
   public function __construct($title, $done = false, $id = null)
   {
-    $this->title = $title;
+    $this->title = (string) $title;
     $this->done = (bool) $done;
     $this->id = (int) $id;
   }
@@ -26,6 +26,10 @@ class Task
 
   public function getTitle()
   { return $this->title;
+  }
+
+  public function setDone($done)
+  { $this->done = (bool) $done;
   }
 
   public function markAsDone()

@@ -7,7 +7,7 @@ class RestApiTest extends AbstractTestCase
 
   public function testGetTaskList()
   {
-    $output = $this->request('GET', '/task/');
+    $output = $this->request('GET', '/task');
     $tasks = json_decode($output, true);
     $this->assertEquals(200, $this->response->getStatusCode());
     $this->assertCount(2, $tasks);
@@ -16,8 +16,14 @@ class RestApiTest extends AbstractTestCase
 
   public function testRemoveTask()
   {
-    $this->request('DELETE', '/task/1/');
+    $this->request('DELETE', '/task/1');
     $this->assertEquals(204, $this->response->getStatusCode());
-  }    
+  }
+
+  public function testUpdateTask()
+  {
+    $this->request('PUT', '/task/1');
+    $this->assertEquals(200, $this->response->getStatusCode());
+  }
 
 }
