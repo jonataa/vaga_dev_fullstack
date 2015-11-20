@@ -8,7 +8,6 @@
 <body>
   <h2>Todo List</h2>
   <div ng-controller="TodoListCtrl">
-    <pre>{{tasks}}</pre>
     <form ng-submit="submit()">
       <input type="text" ng-model="newTitle" placeholder="Ir no shopping">
       <input type="submit" value="Adicionar">
@@ -17,10 +16,11 @@
       <li ng-repeat="(key, task) in tasks">
         <input type="checkbox" ng-model="task.done">
         <span class="task-status-{{ task.done }}">{{ task.title }}</span>
-        <a href="#" ng-click="delete(key)" class="btn-excluir">excluir</a>
+        <a href="#" ng-click="delete(key, task.id)" class="btn-excluir">excluir</a>
       </li>
     </ul>
   </div>
+
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
   <script src="js/app.js"></script>

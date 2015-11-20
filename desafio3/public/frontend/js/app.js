@@ -12,7 +12,9 @@ angular.module('myTodoList', ['TodoService'])
         });
     };
 
-    $scope.delete = function (key) {
-      $scope.tasks.splice(key, 1);
+    $scope.delete = function (key, taskId) {
+      Task.delete({taskId: taskId}, function () {
+        $scope.tasks.splice(key, 1);
+      });
     };
   });
