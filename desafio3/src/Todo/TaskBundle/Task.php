@@ -28,6 +28,10 @@ class Task
   { return $this->title;
   }
 
+  public function setDone($done)
+  { $this->done = (bool) $done;
+  }
+
   public function markAsDone()
   {
     $this->done = true;

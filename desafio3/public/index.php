@@ -6,6 +6,6 @@ $app = require ROOT . 'src/bootstrap.php';
 $app = require ROOT . 'src/routes.php';
 
 # debug mode
-//$app->settings['displayErrorDetails'] = true;
+$app->settings['displayErrorDetails'] = true;
 
 $app->run();
