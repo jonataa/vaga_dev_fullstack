@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "homepage": "https://github.com/jonataa/vaga_dev_fullstack",
+  "authors": [
+    "Jonata Weber <jonataa@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}
