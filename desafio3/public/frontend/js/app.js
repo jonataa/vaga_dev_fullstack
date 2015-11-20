@@ -5,8 +5,11 @@ angular.module('myTodoList', ['TodoService'])
     });
 
     $scope.submit = function () {
-      $scope.tasks.push({'title': $scope.newTitle, 'done': false});
-      $scope.newTitle = '';
+      new Task({task: $scope.newTitle, done: false})
+        .$save(function (newTask) {
+          $scope.tasks.push(newTask);
+          $scope.newTitle = '';
+        });
     };
 
     $scope.delete = function (key) {
