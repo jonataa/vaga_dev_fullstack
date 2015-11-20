@@ -1,11 +1,11 @@
 # Todo (PHP + AngularJS)
 
-## Running Rest API
+## Requirements
+* PHP >= 5.6
+
+## Running
 ```shell
-$ php bin/composer.phar install
-$ export DB=sqlite:../db/database.sq3
-$ php -S localhost:8000 -t public -c php.ini
-$ open http://localhost:8000/frontend/
+$ php run.php
 ```
 
 ## Testing
@@ -18,9 +18,9 @@ Output:
 ```
 PHPUnit 5.0.9 by Sebastian Bergmann and contributors.
 
-.........                                                           9 / 9 (100%)
+...........                                                       11 / 11 (100%)
 
-Time: 58 ms, Memory: 4.00Mb
+Time: 64 ms, Memory: 4.00Mb
 
-OK (9 tests, 19 assertions)
+OK (11 tests, 22 assertions)
 ```
