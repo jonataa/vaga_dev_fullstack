@@ -1,10 +1,8 @@
 angular.module('myTodoList', ['TodoService'])
   .controller('TodoListCtrl', function ($scope, Task) {
-    Task.query();
-    $scope.tasks = [
-      {title: 'Fazer desafio da iTFLEX', done: false},
-      {title: 'Tomar um café', done: true}
-    ];
+    var tasks = Task.query(function () {
+        $scope.tasks = tasks;
+    });
 
     $scope.submit = function () {
       $scope.tasks.push({'title': $scope.newTitle, 'done': false});
