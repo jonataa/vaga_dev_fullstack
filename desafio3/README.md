@@ -1,10 +1,10 @@
 # Todo (PHP + AngularJS)
 
-## Running
+## Running Rest API
 ```shell
 $ php bin/composer.phar install
 $ export DB=sqlite:../db/database.sq3
-$ php -S localhost:8000 -t public -c php.ini
+$ php -S localhost:8000 -t public/api -c php.ini
 ```
 
 ## Testing
