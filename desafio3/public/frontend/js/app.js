@@ -12,6 +12,10 @@ angular.module('myTodoList', ['TodoService'])
         });
     };
 
+    $scope.changeStatus = function (task) {
+      Task.update({taskId: task.id, done: task.done});
+    };
+
     $scope.delete = function (key, taskId) {
       Task.delete({taskId: taskId}, function () {
         $scope.tasks.splice(key, 1);

@@ -14,7 +14,7 @@
     </form>
     <ul>
       <li ng-repeat="(key, task) in tasks">
-        <input type="checkbox" ng-model="task.done">
+        <input type="checkbox" ng-model="task.done" ng-change="changeStatus(task)">
         <span class="task-status-{{ task.done }}">{{ task.title }}</span>
         <a href="#" ng-click="delete(key, task.id)" class="btn-excluir">excluir</a>
       </li>
