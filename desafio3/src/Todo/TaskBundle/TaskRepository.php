@@ -50,11 +50,20 @@ class TaskRepository
   public function getAll()
   {
     $rows = array();
-    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');    
+    $tasks = $this->pdo->query('SELECT id, title, done FROM tasks');
     foreach ($tasks as $task) {
       $rows[] = new Task($task['title'], $task['done'], $task['id']);
     }
     return $rows;
+  }
+
+  public function findById($id)
+  {
+    $stmt = $this->pdo->prepare('SELECT id, title, done FROM tasks WHERE id = :id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $task = $stmt->fetch();  
+    return new Task($task['title'], $task['done'], $task['id']);
   }
 
   public function count()
