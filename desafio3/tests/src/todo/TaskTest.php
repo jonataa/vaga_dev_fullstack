@@ -1,11 +1,9 @@
 <?php
 
-require 'tests/AbstractTestCase.php';
-require 'src/Api/Todo/TaskBundle/Task.php';
-require 'src/Api/Todo/TaskBundle/TaskRepository.php';
+namespace Test;
 
-use Api\Todo\TaskBundle\Task;
-use Api\Todo\TaskBundle\TaskRepository;
+use App\Todo\TaskBundle\Task;
+use App\Todo\TaskBundle\TaskRepository;
 
 class TaskTest extends AbstractTestCase
 {
@@ -42,7 +40,7 @@ class TaskTest extends AbstractTestCase
   public function testRemoveTaskByIdFromRepository()
   {
     $task1 = $this->rep->save(new Task('Foo Bar')); // id: 1
-    $task2 = $this->rep->save(new Task('Foo Bar')); // id: 2
+    $task2 = $this->rep->save(new Task('Fizz Buzz')); // id: 2
     $this->assertEquals(2, $this->rep->count());
 
     $isRemoved = $this->rep->removeById($task1->getId());
@@ -61,6 +59,23 @@ class TaskTest extends AbstractTestCase
     $task = new Task('Foo Bar');
     $task->markAsDone();
     $this->assertTrue($task->isDone());
+  }
+
+  public function testGetAllTasksFromRepository()
+  {
+    $this->rep->save(new Task('Foo Bar'));
+    $this->rep->save(new Task('Fizz Buzz'));
+    $tasks = $this->rep->getAll();
+
+    $this->assertCount(2, $tasks);
+    $this->assertTrue(is_array($tasks));
+    $this->assertEquals('Foo Bar', $tasks[0]->getTitle());
+    $this->assertEquals('Fizz Buzz', $tasks[1]->getTitle());
+  }
+  
+  public function tearDown()
+  {
+    $this->databaseDestroy();
   }
 
 }

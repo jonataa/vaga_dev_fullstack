@@ -2,10 +2,10 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$app = new Silex\Application();
+$app = require __DIR__.'/../src/bootstrap.php';
+$app = require __DIR__.'/../src/routes.php';
 
-$app->get('/hello/{name}', function($name) use($app) {
-    return 'Hello '.$app->escape($name);
-});
+# debug mode
+//$app->settings['displayErrorDetails'] = true;
 
 $app->run();

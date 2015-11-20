@@ -1,16 +1,18 @@
 <?php
 
-namespace Api\Todo\TaskBundle;
+namespace App\Todo\TaskBundle;
 
 class Task
 {
-  protected $id;
-  protected $title;
-  protected $done = false;
+  public $id;
+  public $title;
+  public $done;
 
-  public function __construct($title)
+  public function __construct($title, $done = false, $id = null)
   {
     $this->title = $title;
+    $this->done = (bool) $done;
+    $this->id = (int) $id;
   }
 
   public function getId()
